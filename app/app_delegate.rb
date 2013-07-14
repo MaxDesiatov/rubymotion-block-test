@@ -8,3 +8,10 @@ class AppDelegate
     handler(UIBackgroundFetchResultNewData)
   end
 end
+
+class Test < GKMatchmaker
+  def addPlayersToMatch(match, matchRequest:matchRequest, completionHandler:completionHandler)
+    puts 'test'
+    completionHandler(nil)
+  end
+end
